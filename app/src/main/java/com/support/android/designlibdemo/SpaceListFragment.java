@@ -39,18 +39,23 @@ import java.util.Random;
 
 public class SpaceListFragment extends Fragment {
 
+    String[] names;
+    RecyclerView rv;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView rv = (RecyclerView) inflater.inflate(
+         rv = (RecyclerView) inflater.inflate(
                 R.layout.fragment_space_list, container, false);
-        setupRecyclerView(rv);
+        downloadSpaces();
         return rv;
     }
 
-    private List<String> getNames(){
 
-        final List result = new ArrayList<String>();
+    public void downloadSpaces(){
+
+        final List<String> result = new ArrayList<String>();
+
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(getActivity());
@@ -73,7 +78,12 @@ public class SpaceListFragment extends Fragment {
                             for(EV ev : dataSet.getRecords()){
                                 result.add(ev.getFields().getNom_ev());
                             }
-
+                            names = new String[result.size()];
+                            for(int i = 0; i< result.size(); i++){
+                                Log.d(">>" + i, result.get(i));
+                                names[i] = result.get(i);
+                            }
+                            setupRecyclerView(rv);
 
                         }
                         catch (IOException e) {
@@ -95,14 +105,12 @@ public class SpaceListFragment extends Fragment {
         queue.add(stringRequest);
 
 
-
-        return result;
     }
 
     private void setupRecyclerView(RecyclerView recyclerView) {
         recyclerView.setLayoutManager(new LinearLayoutManager(recyclerView.getContext()));
         recyclerView.setAdapter(new SimpleStringRecyclerViewAdapter(getActivity(),
-                getRandomSublist(Spaces.sSpaceStrings, 30)));
+                getRandomSublist(names, 30)));
     }
 
     private List<String> getRandomSublist(String[] array, int amount) {

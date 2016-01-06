@@ -27,9 +27,11 @@ public class Spaces {
 
     public static final String[] sSpaceStrings = {
 
-            "Square Laurent Prache", "Square Ozanam", "Jardin des Champs Elysées",
-            "SQUARE DU VERT GALANT", "Square Boucicaut", "Square Pierre de GAULLE",
-            "Square Santiago du Chili","Square des Recollets", "Jardin de l'église St-Jean-Denys"
+            "aaaa", "bbbb"
+
+//            "Square Laurent Prache", "Square Ozanam", "Jardin des Champs Elysées",
+//            "SQUARE DU VERT GALANT", "Square Boucicaut", "Square Pierre de GAULLE",
+//            "Square Santiago du Chili","Square des Recollets", "Jardin de l'église St-Jean-Denys"
 
     };
 
