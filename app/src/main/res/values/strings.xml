@@ -3,12 +3,11 @@
 <resources>
     <string name="app_name">Green Space</string>
 
-  <string name="space_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
-    cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
-    bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
-    cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
-    the big cheese.</string>
+  <string name="space_ipsum"> Situé en plein cœur du quartier de Notre-Dame des Champs, le jardin est entouré de toutes part de collèges,
+    de facultés et d instituts : collège Stanislas, Institut catholique, école des Mines, faculté de pharmacie
+    et un peu plus loin faculté de droit. L atmosphère y est cependant bien plus tranquille que dans le Quartier Latin.</string>
   <string name="checkin">Checkin</string>
   <string name="menu_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
